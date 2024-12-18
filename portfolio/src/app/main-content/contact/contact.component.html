@@ -1,0 +1,61 @@
+<div class="contact-container">
+    <div class="headline-container">
+        <div class="sideline-left"></div>
+        <h1>Contact</h1>
+    </div>
+    <div class="contact-details-container">
+        <div class="text-container">
+            <h2>Got a problem to solve?</h2>
+            <div class="text-spans">
+                <span>Contact me through this form, I am interested in hearing from you, knowing your ideas and
+                    contributing to your projects with my work.</span>
+                <span>Need a Frontend developer? Contact me!</span>
+            </div>
+        </div>
+        <div class="form-container">
+            <form (ngSubmit)="onSubmit(contactForm)" class="form-container" #contactForm="ngForm">
+                <input #name="ngModel" [(ngModel)]="contactData.name" minlength="2" name="name" type="text"
+                    class="purple-border" placeholder="Your name" required>
+                @if (!name.valid && name.touched){
+                <span class="warn-message">Your name is required</span>
+                }
+                <input [(ngModel)]="contactData.email" #email="ngModel" name="email" type="email" class="purple-border"
+                    placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                @if (!email.valid && email.touched){
+                <span class="warn-message">Your email is required</span>
+                }
+                <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message"
+                    class="purple-border" placeholder="Your message" required></textarea>
+                @if (!message.valid && message.touched){
+                <span class="warn-message">Please enter a message</span>
+                }
+                <div class="policy-container">
+                    <label>
+                        <input type="checkbox" [(ngModel)]="contactData.policy" #policy="ngModel" name="policy"
+                            id="policy">
+                        <span>I've read the</span>
+                    </label>
+                    <a href="Policy">privacy policy</a>
+                    <span>and agree to the processing of my data as outlined.</span>
+                </div>
+                @if (!contactData.policy && contactForm.submitted) {
+                <span class="warn-message-policy">Please accept the privacy policy.</span>
+                }
+                <button [disabled]="!contactForm.valid"
+                    [ngClass]="{'enabled-button': contactForm.valid, 'disabled-button': !contactForm.valid}"
+                    type="submit" [disabled]="!contactForm.valid">Send message!</button>
+            </form>
+
+
+            <div class="arrow-container">
+                <a href="#atf">
+                    <img class="arrow-up" src="./assets/images/contact-images/arrow-up-white.png" alt="Arrow Up"
+                        onmouseover="this.src='./assets/images/contact-images/arrow-up-green.png'"
+                        onmouseout="this.src='./assets/images/contact-images/arrow-up-white.png'">
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <img class="purple-shadow" src="./assets/images/purple-footer.png" alt="purple shadow">
+</div>

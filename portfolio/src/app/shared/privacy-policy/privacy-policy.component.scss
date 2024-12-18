@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+}
+
+.privacy-policy-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 120px;
+    padding-right: 120px;
+    background-color: rgba(20, 29, 47, 1);
+    color: white;
+    width: 100%;
+    padding-top: 100px;
+    overflow: hidden;
+    text-align: left;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.headline-button-container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+}
