@@ -206,7 +206,7 @@
     .skill-container {
         justify-content: center;
         padding-left: 0;
-        padding-top: 130px;
+        padding-top: 100px;
         height: 100vh;
     }
 
@@ -241,8 +241,15 @@
 
     .d-none {
         display: flex;
-        padding-left: 100px;
-        padding-right: 30px;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+        gap: 30px;
+        padding-top: 0;
+    }
+
+    h2 {
+        margin: 0;
     }
 
     .green-shadow {
@@ -270,6 +277,8 @@
 @media (max-width: 760px) {
 
     .looking-for-skill-container {
+        gap: 4px;
+
         >h2 {
             margin: 0;
             padding-top: 8px;
@@ -279,6 +288,7 @@
 
 @media (max-width: 740px) {
     .looking-for-skill-container {
+        gap: 12px;
         width: 100%;
         justify-content: center;
     }
@@ -305,10 +315,23 @@
 
 }
 
+@media (max-width: 560px) {
+    .looking-for-skill-container {
+        gap: 12px;
+    }
+
+    .skill-right-headline {
+        >h1 {
+            font-size: 46px;
+        }
+    }
+}
+
 @media (max-width: 475px) {
 
     .looking-for-skill-container {
         font-size: 14px;
+        gap: 16px;
 
         >h2 {
             font-size: 18px;
@@ -322,27 +345,23 @@
 
 @media (max-width: 450px) {
     .skill-name-container {
+        padding-top: 8px;
+
         >img {
             width: 45px;
             height: 45px
         }
     }
 
-    .skill-right-headline {
-        >h1 {
-            font-size: 54px;
-        }
-
-    }
-
     .d-none {
         gap: 0px;
-        width: 350px;
-        justify-content: center;
-        padding-left: 30px;
+        max-width: 350px;
+        max-height: 60%;
     }
 
     .looking-for-skill-container {
+        gap: 6px;
+        
         >h2 {
             padding-top: 50px;
         }
