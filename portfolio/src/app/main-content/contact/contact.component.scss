@@ -65,20 +65,20 @@ h1 {
 
 .purple-border {
     padding: 15px 25px;
-    border: solid 1px rgba(151, 71, 255, 1); 
-    border-radius: 10px; 
-    background-color: transparent; 
-    color: white; 
-    font-size: 16px; 
-    font-weight: 400; 
-    outline: none; 
-    width: 100%; 
-    box-sizing: border-box; 
+    border: solid 1px rgba(151, 71, 255, 1);
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
     font-family: 'Poppins', Courier, monospace;
 }
 
-.purple-border::placeholder { 
-    color: rgba(255, 255, 255, 0.7); 
+.purple-border::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 textarea {
@@ -86,8 +86,8 @@ textarea {
 }
 
 textarea.purple-border {
-    height: 200px; 
-    resize: none; 
+    height: 200px;
+    resize: none;
 }
 
 .policy-container {
@@ -95,6 +95,21 @@ textarea.purple-border {
     align-items: center;
     gap: 4px;
     font-size: 14px;
+
+
+}
+
+.checkbox-span {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: 5px;
+
+}
+
+.checkbox-span-first-part {
+    display: flex;
+    gap: 5px;
 
     >a {
         text-decoration: none;
@@ -121,24 +136,24 @@ input[type="checkbox"] {
     border: 2px solid rgba(112, 230, 28, 1);
     border-radius: 4px;
     cursor: pointer;
-    -webkit-appearance: none;  
-    -moz-appearance: none;    
-    appearance: none;        
-    position: relative;      
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
 }
 
 input[type="checkbox"]:checked::before {
-    content: '✓';           
-    position: absolute;      
-    top: 50%;                
-    left: 50%;               
-    transform: translate(-50%, -50%); 
-    font-size: 14px;         
-    color: white;            
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: white;
 }
 
 input[type="checkbox"]:checked {
-    background-color: rgba(112, 230, 28, 0.6); 
+    background-color: rgba(112, 230, 28, 0.6);
 }
 
 button {
@@ -152,7 +167,7 @@ button {
     font-family: 'Poppins', Courier, monospace;
     white-space: nowrap;
     color: rgb(255, 255, 255);
-    transition: box-shadow 0.3s ease;  // Fließender Übergang für die Hintergrundfarbe
+    transition: box-shadow 0.3s ease; // Fließender Übergang für die Hintergrundfarbe
 
     &:hover {
         cursor: pointer;
@@ -161,14 +176,14 @@ button {
 }
 
 .enabled-button {
-    background: rgba(112, 230, 28, 1); 
+    background: rgba(112, 230, 28, 1);
 }
 
 
 .disabled-button {
-    background: grey; 
+    background: grey;
     cursor: not-allowed;
-    opacity: 0.6; 
+    opacity: 0.6;
 }
 
 .arrow-container {
@@ -177,11 +192,11 @@ button {
     width: 100%;
 }
 
-.arrow-up{
+.arrow-up {
     height: 32px;
     width: 32x;
     object-fit: cover;
-    
+
     &:hover {
         cursor: pointer;
     }
@@ -191,9 +206,9 @@ button {
     width: 600px;
     height: 400px;
     object-fit: contain;
-    position: absolute;  // Positioniere absolut innerhalb des contact-container
-    top: 60%;            // Beispiel: Zentriert es vertikal
-    left: -270px;     
+    position: absolute; // Positioniere absolut innerhalb des contact-container
+    top: 60%; // Beispiel: Zentriert es vertikal
+    left: -270px;
 }
 
 .warn-message {
@@ -206,4 +221,204 @@ button {
 
 .warn-message-policy {
     color: red;
+}
+
+
+// Media Quary//
+
+@media (max-width: 1320px) {
+    
+    .checkbox-span {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    label {
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    button {
+        width: 40%;
+    }
+
+    .form-container {
+        width: 500px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .text-container {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .form-container {
+        width: 400px;
+    }
+
+    button {
+        width: 50%;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .contact-container {
+        padding-top: 100px;
+    }
+
+    .headline-container {
+        >h1 {
+            font-size: 60px;
+        }
+    }
+
+    .contact-details-container {
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+        gap: 14px;
+    }
+
+    .arrow-container {
+        position: relative;
+        bottom: 0;
+        width: 150%;
+    }
+
+    .arrow-up {
+        height: 50px;
+    }
+
+    .text-container {
+        width: 400px;
+    }
+
+    .sideline-left {
+        width: 40%;
+    }
+}
+
+@media (max-width: 800px) {
+    .sideline-left {
+        width: 35%;
+    }
+}
+
+@media (max-width: 710px) {
+    .arrow-container {
+        width: 130%;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .contact-details-container {
+        padding-left: 0;
+    }
+
+    .arrow-container {
+        width: 110%;
+    }
+
+    .purple-shadow {
+        display: none;
+    }
+
+    .headline-container {
+        >h1 {
+            font-size: 45px;
+        }
+    }
+
+    .sideline-left {
+        width: 15%;
+    }
+}
+
+@media (max-width: 610px) {
+    .sideline-left {
+        width: 13%;
+    }
+}
+
+@media (max-width: 580px) {
+    .sideline-left {
+        width: 10%;
+    }
+}
+
+@media (max-width: 520px) {
+    .headline-container {
+        gap: 8px;
+        width: 100%;
+    }
+
+    .sideline-left {
+        width: 8%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sideline-left {
+        width: 5%;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .arrow-container {
+        width: 100%;
+    }
+
+    .text-container {
+        width: 370px;
+    }
+
+    .form-container {
+        width: 370px;
+    }
+}
+
+@media (max-width: 420px) {
+    .sideline-left {
+        width: 3%;
+    }
+
+    .text-container {
+        width: 320px;
+    }
+
+    .form-container {
+        width: 330px;
+    }
+
+    button {
+        width: 60%;
+    }
+
+    .arrow-container {
+        bottom: 0;
+    }
+
+    .checkbox-span {
+        white-space: normal;
+    }
+
+    input[type="checkbox"] {
+        width: 20px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 340px) {
+    .form-container {
+        width: 300px;
+    }
+
+    .text-container {
+        width: 300px;
+    }
 }
