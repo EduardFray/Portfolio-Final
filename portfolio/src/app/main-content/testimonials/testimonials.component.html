@@ -16,7 +16,8 @@
                      [src]="i === currentIndex 
                        ? './assets/images/testimonials/green-dot.png' 
                        : './assets/images/testimonials/purple-dot.png'" 
-                     alt="Dot">
+                     alt="Dot"
+                     (click)="setTestimonial(i)">
                 
                 <img class="arrow-right" src="./assets/images/testimonials/arrow_forward.png" (click)="nextTestimonial()" alt="Next">
             </div>

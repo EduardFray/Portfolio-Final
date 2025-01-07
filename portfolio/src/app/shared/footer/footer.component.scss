@@ -102,3 +102,46 @@ h1 {
         }
     }
 }
+
+//Media Quary//
+
+@media (max-width: 655px) {
+    .footer-content {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        height: 250px;
+    }
+
+    .headline-name {
+        >span {
+            font-size: 50px;
+        }
+    }
+
+    .name-container {
+        align-items: center;
+    }
+
+    footer {
+        height: 300px;
+    }
+
+    .at-name {
+        font-size: 20px;
+        font-family: 'Poppins', Courier, monospace;
+    }
+
+    .footer-links {
+        gap: 32px;
+
+        >a {
+            >img {
+                height: 35px;
+                width: 35px;
+                object-fit: cover;
+            }
+        }
+    }
+    
+}

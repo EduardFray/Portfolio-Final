@@ -45,9 +45,9 @@
                 @if (!contactData.policy && contactForm.submitted) {
                 <span class="warn-message-policy">Please accept the privacy policy.</span>
                 }
-                <button [disabled]="!contactForm.valid"
-                    [ngClass]="{'enabled-button': contactForm.valid, 'disabled-button': !contactForm.valid}"
-                    type="submit" [disabled]="!contactForm.valid">Send message!</button>
+                <button [disabled]="!contactForm.valid || !contactData.policy"
+                    [ngClass]="{'enabled-button': contactForm.valid && contactData.policy, 'disabled-button': !contactForm.valid || !contactData.policy}"
+                    type="submit">Send message!</button>
             </form>
 
 

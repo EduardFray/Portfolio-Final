@@ -48,4 +48,12 @@ nextTestimonial() {
     }
   }
 
+  setTestimonial(i: number) {
+    this.isChanging = true; // Start fade-out
+    setTimeout(() => {
+        this.currentIndex = i; // Set to clicked dot index
+        this.isChanging = false; // Start fade-in
+    }, 200); 
+  }
+
 }
