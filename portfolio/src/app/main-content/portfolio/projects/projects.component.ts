@@ -17,7 +17,8 @@ export class ProjectsComponent {
     name: 'Join',
     language: 'JavaScript | HTML | CSS | Firebase',
     description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-    link: 'http'
+    livelink: 'http',
+    githubLink: ''
   }
 
   @Input() reverseLayout: boolean =  false;

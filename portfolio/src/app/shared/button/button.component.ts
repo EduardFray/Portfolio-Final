@@ -12,4 +12,5 @@ export class ButtonComponent {
 @Input() label: string = 'Let\s Talk!';
 @Input() color: string = 'primary';
 @Input() textOverflow: string = 'clip';
+@Input() link: string = '';
 }

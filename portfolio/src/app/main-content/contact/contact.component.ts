@@ -21,7 +21,7 @@ export class ContactComponent {
     policy: false
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://eduard-fray.com/sendMail.php',

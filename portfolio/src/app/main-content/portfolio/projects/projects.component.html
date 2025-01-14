@@ -7,8 +7,8 @@
         <span class="code-language">{{projectsTest.language}}</span>
         <span class="project-description">{{projectsTest.description}}</span>
         <div class="porject-buttons">
-            <app-button color="second" label="Live test"></app-button>
-            <app-button color="third" label="Github"></app-button>
+            <app-button color="second" label="Live test" [link]="projectsTest.livelink"></app-button>
+            <app-button color="third" label="Github" [link]="projectsTest.githubLink"></app-button>
         </div>
     </div>
 </div>
