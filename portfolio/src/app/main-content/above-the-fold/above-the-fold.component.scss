@@ -10,7 +10,7 @@
 .image-name-elip-container {
     background-color: rgba(20, 29, 47, 1);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     clip-path: ellipse(100% 90% at 20% 10%);
 }
@@ -94,7 +94,16 @@
     }
 }
 
+.find-me-center {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
 .find-me-links-container {
+    position: relative;
+    width: 1440px;
     margin-top: 75px;
     display: flex;
     justify-content: space-between;
@@ -140,7 +149,7 @@
     align-items: center;
     color: white;
     transform: rotate(90deg);
-    padding-right: 100px;
+    padding-right: 20px;
     gap: 3px;
     z-index: 5;
 
@@ -163,7 +172,9 @@
     border: 3px solid rgba(151, 71, 255, 1);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    width: 100px;
+    width: 10700px;
+    position: absolute;
+    left: -10775px;
 }
 
 .intro-container {
@@ -184,9 +195,38 @@
 
 //Media Quary Section//
 
+@media (max-width: 1700px) {
+    .image-name-elip-container {
+        justify-content: space-around;
+    }
+
+    .find-me-links-container {
+        position: static;
+    }
+
+    .sideline {
+        width: 100px;
+        left: 0;
+    }
+
+    .find-me-center {
+        display: block;
+        position: static;
+    }
+
+    .sideline {
+        position: static;
+    }
+
+}
+
 @media (max-width: 1457px) {
     .iam-span {
         font-size: 48px !important;
+    }
+
+    .find-me-links-container {
+        width: auto;
     }
 
 }
@@ -403,7 +443,7 @@
     }
 
     .me-image-first {
-        height: 370px;
+        height: 395px;
         left: 40px;
     }
 
@@ -448,7 +488,7 @@
 
     .me-image-first {
         width: 530px;
-        
+
     }
 }
 

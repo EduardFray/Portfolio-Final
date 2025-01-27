@@ -34,24 +34,34 @@ export class ContactComponent {
     },
   };
 
+  isFormDisabled = false; 
+  showPopup = false; 
+
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
+      this.isFormDisabled = true; 
+      this.showPopup = true; 
+
+      
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response) => {
-            console.log('Server Response:', response);
-            alert('Your message has been successfully sent!');
-
-            ngForm.resetForm();
+          next: () => {
+            console.log('Server Response: Success');
+            this.resetFormAfterDelay(ngForm); 
           },
           error: (error) => {
-            console.error(error);
+            console.error('Error:', error);
+            this.resetFormAfterDelay(ngForm);
           },
-          complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      
-      ngForm.resetForm();
     }
+  }
+
+  resetFormAfterDelay(ngForm: NgForm) {
+    setTimeout(() => {
+      this.isFormDisabled = false; 
+      this.showPopup = false; 
+      ngForm.resetForm(); 
+    }, 2000); 
   }
 }

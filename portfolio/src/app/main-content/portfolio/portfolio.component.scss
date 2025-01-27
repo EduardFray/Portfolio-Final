@@ -35,7 +35,7 @@ h1 {
     height: 1px;
     background-color: rgba(151, 71, 255, 1);
     border: 3px solid rgba(151, 71, 255, 1);
-    width: 38%;
+    width: 42%;
 }
 
 .sideline-left {
@@ -50,6 +50,7 @@ h1 {
 .explore-text {
     font-size: 16px;
     font-weight: 400;
+    z-index: 10;
 }
 
 .purple-shadow{
@@ -59,6 +60,32 @@ h1 {
     left: 0px;
     top: 3700px;
     z-index: 1;
+}
+
+//Media Quary//
+
+@media (max-width: 2700px) {
+    .sideline-right {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1950px) {
+    .sideline-right {
+        width: 38%;
+    }
+}
+
+@media (max-width: 1700px) {
+    .sideline-right {
+        width: 36%;
+    }
+}
+
+@media (max-width: 1500px) {
+    .sideline-right {
+        width: 34%;
+    }
 }
 
 @media (max-width: 1320px) {
