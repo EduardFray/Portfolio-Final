@@ -11,6 +11,8 @@ import { Component, Renderer2 } from '@angular/core';
 export class HeaderComponent {
 
   isMenuOpen: boolean = false;
+  currentLang: string ='en';
+  flagSrc: string = './assets/images/header/british-flag.png';
 
   constructor(private renderer: Renderer2) {}
 
@@ -22,4 +24,16 @@ export class HeaderComponent {
       this.renderer.removeClass(document.body, 'no-scroll');
     }
   }
+
+  switchLanguage() {
+    if (this.currentLang === 'en') {
+      this.currentLang = 'de';
+      this.flagSrc = './assets/images/header/german-flag.png';
+    } else {
+      this.currentLang = 'en';
+      this.flagSrc = './assets/images/header/british-flag.png';
+    }
+  }
 }
+
+

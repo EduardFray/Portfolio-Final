@@ -86,6 +86,20 @@ nav {
     display: none;
 }
 
+.flag-container {
+    width: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    cursor: pointer;
+    >img {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+    }
+}
+
 //Responisve Menu//
 
 .menu-box {

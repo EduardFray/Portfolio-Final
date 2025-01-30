@@ -16,6 +16,10 @@
                 <a href="#aboutMe">About me</a>
                 <a href="#skills">Skills</a>
                 <a href="#portfolio">Portfolio</a>
+                <div class="flag-container" (click)="switchLanguage()">
+                    <img [src]="flagSrc" alt="flag">
+                    <span>{{currentLang.toUpperCase()}}</span>
+                </div>
             </div>
         </div>
     </nav>
@@ -25,7 +29,7 @@
     <div id="resp-menu" class="menu-box" [class.closed-menu]="!isMenuOpen">
         <div class="menu-links">
             <div class="closed-btn-container">
-                <img class="closed-button" (click)="toggleMenu()" src="../../../../assets/images/header/close-menu.png"
+                <img class="closed-button" (click)="toggleMenu()" src="./assets/images/header/close-menu.png"
                     alt="close-img">
             </div>
             <a href="#aboutMe" (click)="toggleMenu()">About me</a>
